@@ -50,9 +50,6 @@
     "@changesets/changelog-github": "0.2.7",
     "@changesets/cli": "2.12.x",
     "@size-limit/preset-small-lib": "4.9.x",
-    "@storybook/addon-essentials": "6.1.x",
-    "@storybook/addon-links": "6.1.x",
-    "@storybook/vue": "6.1.x",
     "@typescript-eslint/eslint-plugin": "4.12.x",
     "@typescript-eslint/parser": "4.12.x",
     "@vue/cli-plugin-typescript": "4.5.x",
@@ -74,10 +71,14 @@
     "rollup-plugin-vue": "6.0.x",
     "size-limit": "4.9.x",
     "stylelint": "13.8.x",
+    "tailwindcss": "2.0.2",
+    "tailwindcss-capsize": "1.1.0",
     "tsdx": "0.14.1",
     "tslib": "2.1.x",
     "typescript": "4.1.x",
-    "vue": "3.0.4"
+    "vite": "2.0.0-beta.36",
+    "vue": "3.0.4",
+    "vue-router": "4.0.3"
   },
   "importSort": {
     ".js,.ts,.vue": {
@@ -85,12 +86,15 @@
       "style": "python",
       "options": {
         "knownFramework": [
-          "@vue"
+          "@vue",
+          "vue",
+          "vue-router"
         ],
         "knownFirstparty": [
           "~"
         ]
       }
     }
-  }
+  },
+  "dependencies": {}
 }
