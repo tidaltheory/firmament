@@ -15,8 +15,8 @@ const spaceClassNames = {
 
 type SpaceClass = 'none' | keyof typeof spaceClassNames
 
-export default defineComponent({
-    name: 'LayoutStack',
+export const Stack = defineComponent({
+    name: 'Stack',
     functional: true,
     components: {
         Divider,

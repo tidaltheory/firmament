@@ -1,63 +1,58 @@
 {
+  "name": "firmament",
   "version": "0.1.0",
   "license": "ISC",
+  "author": "Jeff",
   "main": "dist/index.js",
+  "module": "dist/firmament.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "engines": {
-    "node": ">=10"
-  },
   "scripts": {
-    "start": "tsdx watch",
+    "analyze": "size-limit --why",
     "build": "tsdx build --format cjs,esm,umd",
-    "test": "tsdx test --passWithNoTests",
+    "build:playground": "NODE_ENV=production vite build playground",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why",
-    "start:storybook": "start-storybook -p 6006",
-    "build:storybook": "build-storybook"
-  },
-  "peerDependencies": {
-    "vue": ">=2.6 || 3"
+    "start": "tsdx watch",
+    "start:playground": "vite serve playground",
+    "test": "tsdx test --passWithNoTests"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{css,vue}": [
+      "stylelint --fix"
+    ],
+    "*.{js,jsx,ts,tsx,vue}": [
+      "eslint --fix"
+    ],
+    "package.json": [
+      "prettier --write"
+    ]
   },
   "prettier": {
     "semi": false,
     "singleQuote": true,
     "trailingComma": "all"
   },
-  "name": "firmament",
-  "author": "Jeff",
-  "module": "dist/firmament.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/firmament.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/firmament.esm.js",
-      "limit": "10 KB"
-    }
-  ],
+  "dependencies": {},
   "devDependencies": {
     "@changesets/changelog-github": "0.2.7",
     "@changesets/cli": "2.12.x",
     "@size-limit/preset-small-lib": "4.9.x",
-    "@storybook/addon-essentials": "6.1.x",
-    "@storybook/addon-links": "6.1.x",
-    "@storybook/vue": "6.1.x",
+    "@tailwindcss/typography": "0.4.0",
     "@typescript-eslint/eslint-plugin": "4.12.x",
     "@typescript-eslint/parser": "4.12.x",
+    "@vitejs/plugin-vue": "1.1.x",
     "@vue/cli-plugin-typescript": "4.5.x",
     "@vue/cli-plugin-unit-jest": "4.5.x",
-    "@vue/compiler-sfc": "3.0.x",
+    "@vue/compiler-sfc": "3.0.5",
     "@vue/eslint-config-prettier": "6.0.x",
     "@vue/eslint-config-typescript": "7.0.x",
     "@vue/test-utils": "2.0.0-beta.10",
@@ -74,10 +69,21 @@
     "rollup-plugin-vue": "6.0.x",
     "size-limit": "4.9.x",
     "stylelint": "13.8.x",
+    "tailwindcss": "2.0.2",
+    "tailwindcss-capsize": "1.1.0",
     "tsdx": "0.14.1",
     "tslib": "2.1.x",
     "typescript": "4.1.x",
-    "vue": "3.0.4"
+    "vite": "2.0.0-beta.37",
+    "vite-plugin-pages": "0.1.7",
+    "vue": "3.0.5",
+    "vue-router": "4.0.3"
+  },
+  "peerDependencies": {
+    "vue": ">=2.6 || 3"
+  },
+  "engines": {
+    "node": ">=10"
   },
   "importSort": {
     ".js,.ts,.vue": {
@@ -85,12 +91,24 @@
       "style": "python",
       "options": {
         "knownFramework": [
-          "@vue"
+          "@vue",
+          "vue",
+          "vue-router"
         ],
         "knownFirstparty": [
           "~"
         ]
       }
     }
-  }
+  },
+  "size-limit": [
+    {
+      "path": "dist/firmament.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/firmament.esm.js",
+      "limit": "10 KB"
+    }
+  ]
 }
