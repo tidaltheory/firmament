@@ -1,4 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const plugin = require('tailwindcss/plugin')
+
+const PSEUDO_ELEMENTS = ['before', 'after']
 
 module.exports = {
     theme: {
@@ -35,5 +38,33 @@ module.exports = {
         },
     },
 
-    plugins: [require('@tailwindcss/typography')],
+    variants: {
+        extend: {
+            display: ['before'],
+        },
+    },
+
+    plugins: [
+        plugin(function ({ addUtilities, addVariant, e }) {
+            addUtilities(
+                {
+                    '.empty-content': {
+                        content: "''",
+                    },
+                },
+                PSEUDO_ELEMENTS,
+            )
+            PSEUDO_ELEMENTS.forEach((pseudo) => {
+                addVariant(pseudo, ({ modifySelectors, separator }) => {
+                    modifySelectors(({ className }) => {
+                        return `.${e(
+                            `${pseudo}${separator}${className}`,
+                        )}::${pseudo}`
+                    })
+                })
+            })
+        }),
+
+        require('@tailwindcss/typography'),
+    ],
 }

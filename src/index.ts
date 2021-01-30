@@ -1,2 +1,2 @@
-export * from './components/divider/divider.vue'
+export * from './components/divider/divider'
 export * from './components/stack/stack'

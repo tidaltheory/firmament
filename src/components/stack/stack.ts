@@ -1,19 +1,8 @@
 import { PropType, defineComponent, h } from 'vue'
 
-import Divider from '../divider/divider.vue'
+import { Divider } from '../divider/divider'
 
-const spaceClassNames = {
-    2: {
-        space: 'pt-2',
-        offset: 'before:-mt-2',
-    },
-    4: {
-        space: 'pt-4',
-        offset: 'before:-mt-4',
-    },
-}
-
-type SpaceClass = 'none' | keyof typeof spaceClassNames
+type SpaceClass = 'space-y-4' | string
 
 export const Stack = defineComponent({
     name: 'Stack',
@@ -22,34 +11,27 @@ export const Stack = defineComponent({
         Divider,
     },
     props: {
-        space: {
+        spaceClass: {
             type: String as PropType<SpaceClass>,
-            default: 'none',
+            default: 'space-y-4',
         },
         dividers: Boolean,
     },
     setup(props, { slots }) {
-        let { space, dividers } = props
+        let { spaceClass, dividers } = props
         let stackNodes = slots.default?.().filter((child) => child.type) || []
-        let spaceClasses = space !== 'none' ? spaceClassNames[space] : null
-        let spaceClass = spaceClasses?.space
-        let offsetClass = spaceClasses
-            ? `before:block before:empty-content ${spaceClasses.offset}`
-            : null
 
         return () =>
             h(
                 'div',
-                { class: offsetClass },
+                { class: spaceClass },
                 stackNodes.map((node, index) => {
+                    let showDivider = dividers && index > 0
                     return h(
                         'div',
-                        { class: spaceClass },
-                        dividers && index > 0
-                            ? [
-                                  h(Divider),
-                                  h('div', { class: spaceClass }, [node]),
-                              ]
+                        { class: showDivider ? spaceClass : undefined },
+                        showDivider
+                            ? [h(Divider), h('div', {}, [node])]
                             : [node],
                     )
                 }),
