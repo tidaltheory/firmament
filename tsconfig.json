@@ -25,6 +25,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "paths": {
+      "~": ["src"],
       "firmament": ["src"]
     },
     "resolveJsonModule": true,

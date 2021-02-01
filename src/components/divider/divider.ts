@@ -7,7 +7,7 @@ export const Divider = defineComponent({
         return () =>
             h(
                 'div',
-                { class: 'relative z-10 h-px -mb-px' },
+                { class: 'relative z-10 w-full h-px -mb-px' },
                 h('div', { class: 'absolute w-full h-px bg-gray-300' }),
             )
     },

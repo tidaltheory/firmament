@@ -1,8 +1,10 @@
 import { PropType, defineComponent, h } from 'vue'
 
+import { AlignItems, SpaceY } from '../../types'
 import { Divider } from '../divider/divider'
 
-type SpaceClass = 'space-y-4' | string
+type SpaceClass = SpaceY | SpaceY[]
+type AlignClass = AlignItems | AlignItems[]
 
 export const Stack = defineComponent({
     name: 'Stack',
@@ -15,10 +17,15 @@ export const Stack = defineComponent({
             type: String as PropType<SpaceClass>,
             default: 'space-y-4',
         },
+        alignClass: {
+            type: String as PropType<AlignClass>,
+            default: '',
+        },
         dividers: Boolean,
     },
     setup(props, { slots }) {
-        let { spaceClass, dividers } = props
+        let { spaceClass, alignClass, dividers } = props
+        let wrapperClass = 'flex flex-col'
         let stackNodes = slots.default?.().filter((child) => child.type) || []
 
         return () =>
@@ -29,7 +36,11 @@ export const Stack = defineComponent({
                     let showDivider = dividers && index > 0
                     return h(
                         'div',
-                        { class: showDivider ? spaceClass : undefined },
+                        {
+                            class: showDivider
+                                ? [spaceClass, wrapperClass, alignClass]
+                                : [wrapperClass, alignClass],
+                        },
                         showDivider
                             ? [h(Divider), h('div', {}, [node])]
                             : [node],

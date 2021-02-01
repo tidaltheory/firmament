@@ -2,11 +2,13 @@
     <div
         class="flex items-start justify-center w-screen h-full p-12 bg-gray-50"
     >
-        <stack space-class="space-y-8" :dividers="true">
-            <div class="w-16 h-16 bg-gray-200" />
-            <div class="w-16 h-16 bg-gray-200" />
-            <div class="w-16 h-16 bg-gray-200" />
-        </stack>
+        <div class="w-auto">
+            <stack space-class="space-y-8" :dividers="true">
+                <div class="w-16 h-16 bg-gray-200" />
+                <div class="w-16 h-16 bg-gray-200" />
+                <div class="w-16 h-16 bg-gray-200" />
+            </stack>
+        </div>
     </div>
 </template>
 

@@ -96,7 +96,8 @@
           "vue-router"
         ],
         "knownFirstparty": [
-          "~"
+          "~",
+          "firmament"
         ]
       }
     }
