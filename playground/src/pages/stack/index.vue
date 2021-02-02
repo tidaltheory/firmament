@@ -1,36 +1,31 @@
 <template>
-    <div
-        class="flex items-start justify-center w-screen h-full p-12 bg-gray-50"
-    >
-        <div class="w-auto">
-            <stack space-class="space-y-8" :dividers="true">
-                <div class="w-16 h-16 bg-gray-200" />
-                <div class="w-16 h-16 bg-gray-200" />
-                <div class="w-16 h-16 bg-gray-200" />
-            </stack>
-        </div>
+    <div className="container my-24">
+        <stack space-class="space-y-8">
+            <h2 class="text-3xl tracking-tight font-extrabold text-gray-900">
+                Stack
+            </h2>
+            <div className="prose">
+                <p>
+                    The most common white space on screen is between elements
+                    stacked vertically. Can also be used to automatically insert
+                    dividing lines between children.
+                </p>
+            </div>
+            <div class="w-auto">
+                <stack space-class="space-y-8" :dividers="true">
+                    <div class="h-16 bg-gray-200" />
+                    <div class="h-16 bg-gray-200" />
+                    <div class="h-16 bg-gray-200" />
+                </stack>
+            </div>
+        </stack>
     </div>
 </template>
 
 <script>
-import { ref } from 'vue'
+import { defineComponent } from 'vue'
 import { Stack } from 'firmament'
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
-export default {
+export default defineComponent({
     components: { Stack },
-    setup(props, context) {
-        let state = ref(false)
-        return {
-            state,
-            resolveSwitchClass({ checked }) {
-                return classNames(
-                    'relative inline-flex flex-shrink-0 h-6 transition-colors duration-200 ease-in-out border-2 border-transparent rounded-full cursor-pointer w-11 focus:outline-none focus:shadow-outline',
-                    checked ? 'bg-indigo-600' : 'bg-gray-200',
-                )
-            },
-        }
-    },
-}
+})
 </script>

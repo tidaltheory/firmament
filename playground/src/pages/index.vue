@@ -6,6 +6,8 @@
         <div className="prose">
             <h3 class="text-xl">Stack</h3>
             <router-link to="/stack/">Basic Stack</router-link>
+            <h3 class="text-xl">Inline</h3>
+            <router-link to="/inline/">Basic Inline</router-link>
         </div>
     </div>
 </template>
