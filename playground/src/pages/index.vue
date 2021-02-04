@@ -8,6 +8,8 @@
             <router-link to="/stack/">Basic Stack</router-link>
             <h3 class="text-xl">Inline</h3>
             <router-link to="/inline/">Basic Inline</router-link>
+            <h3 class="text-xl">Text</h3>
+            <router-link to="/text/">Basic Text</router-link>
         </div>
     </div>
 </template>

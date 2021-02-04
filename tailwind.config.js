@@ -9,6 +9,16 @@ module.exports = {
             center: true,
         },
 
+        fontMetrics: {
+            sans: {
+                capHeight: 2048,
+                ascent: 2728,
+                descent: -680,
+                lineGap: 0,
+                unitsPerEm: 2816,
+            },
+        },
+
         extend: {
             fontFamily: {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans],
@@ -66,5 +76,7 @@ module.exports = {
         }),
 
         require('@tailwindcss/typography'),
+        // https://github.com/stormwarning/tailwindcss-capsize
+        require('tailwindcss-capsize').default({ rootSize: 16 }),
     ],
 }
