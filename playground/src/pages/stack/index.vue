@@ -1,6 +1,6 @@
 <template>
     <div className="container my-24">
-        <stack space-class="space-y-8">
+        <Stack space-class="space-y-8">
             <h2 class="text-3xl tracking-tight font-extrabold text-gray-900">
                 Stack
             </h2>
@@ -12,20 +12,21 @@
                 </p>
             </div>
             <div class="w-auto">
-                <stack space-class="space-y-8" :dividers="true">
-                    <div class="h-16 bg-gray-200" />
-                    <div class="h-16 bg-gray-200" />
-                    <div class="h-16 bg-gray-200" />
-                </stack>
+                <Stack space-class="space-y-8" :dividers="true">
+                    <Placeholder class="h-16" />
+                    <Placeholder class="h-16" />
+                    <Placeholder class="h-16" />
+                </Stack>
             </div>
-        </stack>
+        </Stack>
     </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
 import { Stack } from 'firmament'
+import Placeholder from '../../components/placeholder.vue'
 export default defineComponent({
-    components: { Stack },
+    components: { Stack, Placeholder },
 })
 </script>

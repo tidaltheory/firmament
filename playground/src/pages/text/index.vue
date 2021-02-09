@@ -13,7 +13,7 @@
             </div>
             <div class="w-auto">
                 <Stack space-class="space-y-8" dividers>
-                    <Text
+                    <Text class="font-sans text-base leading-6"
                         >Corporate-grade Tokyo console geodesic gaijin silver
                         ICE graphic socket polycarbon razorgirl Yakuza
                         television.</Text
