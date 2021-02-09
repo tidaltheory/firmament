@@ -4,7 +4,7 @@
   "baseBranch": "main",
   "changelog": [
     "@changesets/changelog-github",
-    { "repo": "stormwarning/firmament" }
+    { "repo": "tidaltheory/firmament" }
   ],
   "commit": false,
   "ignore": [],
