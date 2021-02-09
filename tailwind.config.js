@@ -4,6 +4,8 @@ const plugin = require('tailwindcss/plugin')
 const PSEUDO_ELEMENTS = ['before', 'after']
 
 module.exports = {
+    purge: ['src/components/**/*.ts', 'playground/**/*.vue'],
+
     theme: {
         container: {
             center: true,
