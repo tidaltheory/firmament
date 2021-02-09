@@ -8,6 +8,7 @@ export default defineConfig({
     alias: {
         firmament: path.resolve(__dirname, '../src/index.ts'),
     },
+    base: process.env.NODE_ENV === 'production' ? '/firmament/' : '/',
     plugins: [
         Vue({ include: [/\.vue$/, /\.md$/] }),
         Pages({ extensions: ['vue', 'md'] }),
