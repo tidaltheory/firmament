@@ -54,10 +54,10 @@
     "@vitejs/plugin-vue": "1.1.x",
     "@vue/cli-plugin-typescript": "4.5.x",
     "@vue/cli-plugin-unit-jest": "4.5.x",
-    "@vue/compiler-sfc": "3.0.5",
+    "@vue/compiler-sfc": "3.0.7",
     "@vue/eslint-config-prettier": "6.0.x",
     "@vue/eslint-config-typescript": "7.0.x",
-    "@vue/test-utils": "2.0.0-rc.0",
+    "@vue/test-utils": "2.0.0-rc.3",
     "@zazen/eslint-config": "2.1.x",
     "@zazen/stylelint-config": "1.0.x",
     "eslint": "7.17.x",
@@ -78,7 +78,7 @@
     "typescript": "4.1.x",
     "vite": "2.0.5",
     "vite-plugin-pages": "0.5.0",
-    "vue": "3.0.5",
+    "vue": "3.0.7",
     "vue-router": "4.0.3"
   },
   "peerDependencies": {
