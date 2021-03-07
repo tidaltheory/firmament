@@ -79,6 +79,6 @@ module.exports = {
 
         require('@tailwindcss/typography'),
         // https://github.com/stormwarning/tailwindcss-capsize
-        require('tailwindcss-capsize').default({ rootSize: 16 }),
+        require('tailwindcss-capsize').default(),
     ],
 }
