@@ -21,7 +21,10 @@ export const Stack = defineComponent({
             type: String as PropType<AlignClass>,
             default: '',
         },
-        dividers: Boolean,
+        dividers: {
+            type: Boolean,
+            default: false,
+        },
     },
     setup(props, { slots }) {
         let { spaceClass, alignClass, dividers } = props

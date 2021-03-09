@@ -15,8 +15,8 @@ export const Text = defineComponent({
             type: String,
             default: 'span',
         },
-        truncate: Boolean,
-        preventSelection: Boolean,
+        truncate: { type: Boolean },
+        preventSelection: { type: Boolean },
     },
     setup(props, { attrs, slots }) {
         let { as, truncate, preventSelection } = props
