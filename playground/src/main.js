@@ -9,7 +9,9 @@ import App from './App.vue'
 
 console.log(routes)
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(
+        process.env.NODE_ENV === 'production' ? '/firmament/' : '/',
+    ),
     routes,
 })
 
