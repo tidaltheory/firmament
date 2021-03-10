@@ -87,6 +87,39 @@
                     </Columns>
                 </Stack>
             </div>
+            <div className="prose">
+                <Text as="p">
+                    If <code>Column</code> elements are of varying height or
+                    less than full width, they can be aligned vertically or
+                    distributed horizontally.
+                </Text>
+            </div>
+            <div class="w-auto">
+                <Stack>
+                    <Columns align-y-class="items-center">
+                        <Column>
+                            <Placeholder class="h-4">×</Placeholder>
+                        </Column>
+                        <Column>
+                            <Placeholder class="h-12">×</Placeholder>
+                        </Column>
+                        <Column>
+                            <Placeholder class="h-8">×</Placeholder>
+                        </Column>
+                    </Columns>
+                    <Columns align-class="justify-around">
+                        <Column width-class="w-1/5">
+                            <Placeholder class="h-8">×</Placeholder>
+                        </Column>
+                        <Column width-class="w-1/5">
+                            <Placeholder class="h-8">×</Placeholder>
+                        </Column>
+                        <Column width-class="w-1/5">
+                            <Placeholder class="h-8">×</Placeholder>
+                        </Column>
+                    </Columns>
+                </Stack>
+            </div>
         </Stack>
     </div>
 </template>

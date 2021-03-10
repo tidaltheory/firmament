@@ -33,7 +33,9 @@
 <script>
 import { defineComponent } from 'vue'
 import { Inline, Stack } from 'firmament'
+
 import Placeholder from '../../components/placeholder.vue'
+
 export default defineComponent({
     components: { Inline, Stack, Placeholder },
 })

@@ -9,8 +9,9 @@
                 <router-link
                     class="font-medium text-white hover:text-grey-100"
                     to="/"
-                    >Firmament</router-link
                 >
+                    Firmament
+                </router-link>
             </div>
         </header>
         <main class="flex-1 overflow-auto bg-gray-50">
@@ -20,7 +21,7 @@
     </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from 'vue'
 import KeyCaster from './KeyCaster.vue'
 export default defineComponent({

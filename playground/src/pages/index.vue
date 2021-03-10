@@ -1,23 +1,27 @@
 <template>
     <div className="container my-24">
-        <h2 class="text-3xl tracking-tight font-extrabold text-gray-900">
-            Components
-        </h2>
-        <div className="prose">
-            <router-link to="/stack/"
-                ><h3 class="text-xl">Stack</h3></router-link
-            >
+        <Stack space-class="space-y-8">
+            <h2 class="text-3xl tracking-tight font-extrabold text-gray-900">
+                Components
+            </h2>
+            <div className="prose">
+                <h3 class="text-xl">
+                    <router-link to="/stack">Stack</router-link>
+                </h3>
 
-            <router-link to="/inline/"
-                ><h3 class="text-xl">Inline</h3></router-link
-            >
+                <h3 class="text-xl">
+                    <router-link to="/inline">Inline</router-link>
+                </h3>
 
-            <router-link to="/columns/"
-                ><h3 class="text-xl">Columns</h3></router-link
-            >
+                <h3 class="text-xl">
+                    <router-link to="/columns">Columns</router-link>
+                </h3>
 
-            <router-link to="/text/"><h3 class="text-xl">Text</h3></router-link>
-        </div>
+                <h3 class="text-xl">
+                    <router-link to="/text">Text</router-link>
+                </h3>
+            </div>
+        </Stack>
     </div>
 </template>
 

@@ -3,8 +3,8 @@ import { PropType, defineComponent, h } from 'vue'
 import { AlignItems, Gap, JustifyContent } from '../../types'
 
 type SpaceClass = Gap | Gap[]
-type AlignClass = AlignItems | AlignItems[]
-type AlignYClass = JustifyContent | JustifyContent[]
+type AlignClass = JustifyContent | JustifyContent[]
+type AlignYClass = AlignItems | AlignItems[]
 
 export const Columns = defineComponent({
     name: 'Columns',

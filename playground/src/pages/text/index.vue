@@ -1,6 +1,6 @@
 <template>
     <div className="container my-24">
-        <stack space-class="space-y-8">
+        <Stack space-class="space-y-8">
             <h2 class="text-3xl tracking-tight font-extrabold text-gray-900">
                 Text
             </h2>
@@ -13,20 +13,20 @@
             </div>
             <div class="w-auto">
                 <Stack space-class="space-y-8" dividers>
-                    <Text class="font-sans text-base leading-6"
-                        >Corporate-grade Tokyo console geodesic gaijin silver
-                        ICE graphic socket polycarbon razorgirl Yakuza
-                        television.</Text
-                    >
+                    <Text class="font-sans text-base leading-6">
+                        Corporate-grade Tokyo console geodesic gaijin silver ICE
+                        graphic socket polycarbon razorgirl Yakuza television.
+                    </Text>
                 </Stack>
             </div>
-        </stack>
+        </Stack>
     </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
 import { Stack, Text } from 'firmament'
+
 export default defineComponent({
     components: { Stack, Text },
 })
