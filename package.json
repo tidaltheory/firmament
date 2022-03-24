@@ -68,7 +68,7 @@
     "lint-staged": "10.5.4",
     "prettier": "2.2.1",
     "prettier-plugin-import-sort": "0.0.6",
-    "prettier-plugin-packagejson": "2.2.10",
+    "prettier-plugin-packagejson": "2.2.17",
     "rollup-plugin-vue": "6.0.0",
     "size-limit": "4.10.2",
     "stylelint": "13.13.1",
