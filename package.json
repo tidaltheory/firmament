@@ -47,7 +47,7 @@
     "@changesets/changelog-github": "0.3.0",
     "@changesets/cli": "2.14.1",
     "@size-limit/preset-small-lib": "4.10.2",
-    "@tailwindcss/typography": "0.4.0",
+    "@tailwindcss/typography": "0.5.12",
     "@testing-library/dom": "7.30.3",
     "@testing-library/jest-dom": "5.11.10",
     "@testing-library/vue": "6.4.0",
